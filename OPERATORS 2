@@ -1,0 +1,65 @@
+SELECT * FROM sales
+WHERE order_date BETWEEN '2016-12-01' AND '2016-12-31'
+
+
+SELECT * FROM customer
+WHERE customer_name LIKE 'Claire%'
+
+
+SELECT * FROM customer
+WHERE customer_name LIKE 'Pete%'
+
+
+SELECT * FROM customer
+WHERE customer_name LIKE 'Ke%'
+
+
+--write out queries with LIKE operators
+
+SELECT * FROM customer
+WHERE customer_name LIKE '%ole'
+
+
+SELECT * FROM customer
+WHERE customer_name LIKE 'Anthony%'
+
+
+SELECT * FROM customer
+WHERE city LIKE '%th%'
+
+
+SELECT * FROM customer
+WHERE state LIKE '_a%'
+
+
+SELECT * FROM customer
+WHERE city LIKE 'F_%'
+
+
+SELECT * FROM customer 
+WHERE state LIKE 'T__%'
+
+
+SELECT * FROM customer 
+WHERE customer_name LIKE 'A%e'
+
+
+
+--ALIAS,LIMIT AND ORDER BY FUNCTIONS
+
+SELECT city AS our_city,age,country
+FROM customer
+
+SELECT * FROM customer
+LIMIT 10;
+
+SELECT * FROM sales
+ORDER BY profit DESC
+
+SELECT * FROM sales
+ORDER BY PROFIT DESC
+LIMIT 10;
+
+SELECT * FROM sales
+ORDER BY profit DESC
+LIMIT 5;
