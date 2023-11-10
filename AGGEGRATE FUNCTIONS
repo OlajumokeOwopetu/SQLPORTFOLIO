@@ -1,0 +1,89 @@
+--AGGREGATE FUNCTIONS; SUM,COUNT,AVG,MIN,MAX,DISTINCT
+
+SELECT count (order_line) AS count_order_line, count (order_id) AS number_of_order_id
+FROM sales
+
+
+SELECT count(*) AS number_of_rows
+FROM sales
+
+
+SELECT count(customer_id) AS number_of_customers
+FROM customer
+
+SELECT MIN (quantity) AS minimum_quantity_purchased, MAX (quantity) AS maximum_quantity_purchased
+FROM sales
+
+--find the average price in sales
+
+SELECT avg(sales) AS avg_sales_made
+FROM sales
+
+--find the average age of customers
+
+SELECT avg(age) AS avg_customer_age
+FROM Customer
+
+--find the total age of customer
+
+SELECT sum(age) AS total_sum_of_age
+FROM customer
+
+--find the total sales made for the year
+
+SELECT sum(sales) AS total_sum_of_sales
+FROM sales
+
+--find the total profit
+
+SELECT sum(profit) AS total_sum_of_profit
+FROM sales
+
+--find the average sales
+
+SELECT avg(sales) AS average_sales
+FROM sales
+
+--find the average quantity
+
+SELECT avg(quantity) AS average_quantity
+FROM sales
+
+--find the top two customers in the firm
+
+SELECT customer_id, profit 
+FROM sales
+ORDER BY PROFIT DESC
+LIMIT 2;
+
+--group by the number customers for the year by their region
+
+SELECT count(customer) AS number_of_customer_in_region,region
+FROM customer
+GROUP BY region;
+
+--group by the number of sales by the each customer
+
+SELECT sum(sales) AS total_sales_of_customer, customer_id
+FROM sales
+GROUP BY customer_id
+ORDER BY total_sales_of_customer DESC
+LIMIT 5;
+
+
+--find the age of people per region that are older than the average age
+-- lets find the average age 
+
+SELECT avg(age)
+FROM customer
+
+--avg age is 44.4
+
+SELECT count(customer_name) AS number_of_customers, avg(age) AS avg_age_customer, region
+FROM customer
+GROUP BY region
+HAVING  avg(age) > 44.4;
+
+
+
+
