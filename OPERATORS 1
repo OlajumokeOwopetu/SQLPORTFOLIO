@@ -1,0 +1,60 @@
+--filter out categories that has product data
+
+SELECT * FROM product
+WHERE category = 'Furniture'
+
+--filter out product_name, and cateory that has Furniture
+
+SELECT product_name, category
+FROM product
+WHERE category = 'Furniture'
+
+--Filter out all customer names that stays in Henderson
+SELECT * FROM customer
+WHERE city = 'Henderson'
+
+
+--filter out segment and customer id that stays in the North
+
+SELECT segment, customer_id
+FROM customer
+WHERE region = 'North'
+
+--filter out customers that stays in the United states
+SELECT customer_name, country
+FROM customer
+WHERE Country = 'United States'
+
+
+--filter out customers that stays in california
+SELECT customer_name, state
+FROM customer
+WHERE State = 'California'
+
+/* Operators
+>
+<
+=
+AND/OR/NOT */
+
+Filter out customer id with quantities greater tahn 10
+
+SELECT * FROM sales
+WHERE quantity > 10;
+
+--Find sales made above the profit margin. take 100 as the profit margin
+SELECT * FROM sales
+WHERE profit > 100;
+
+--find the order sales below 150
+SELECT * FROM sales
+WHERE sales < 150
+
+--find orders that are above discount of 0.2
+SELECT * FROM sales
+WHERE discount > 0.2
+
+--find order id and order line that have discount of above 0.2
+SELECT order_id, order_line
+FROM sales
+WHERE discount > 0.2
