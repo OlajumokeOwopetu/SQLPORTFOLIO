@@ -1,0 +1,64 @@
+/*Reclassify the customers' age
+Classify customers between the ages of 0-20 as young
+Classify customers between the ages of 21-40 as adult
+Classify customers between the ages of 41-60 as older
+Classify customers between the ages of 61 and above as aged */
+
+SELECT *,
+CASE
+WHEN age <=20 THEN 'Young'
+WHEN age <=40 THEN 'Adult'
+WHEN age <=60 THEN 'Older'
+ELSE 'Aged'
+END AS age_group
+FROM customer
+
+
+-- Find the sales that are above the average made
+-- Create a new column that will help to check if a sale is above the average or not
+
+SELECT avg(sales) FROM sales
+--average sales is 229.8
+
+SELECT *,
+CASE
+WHEN sales > 229.8 THEN 'YES'
+ELSE 'NO'
+END AS Above_avg_sales_or_not
+FROM sales
+
+--append a new coloumn that shows if the ship mode is second class or not
+
+SELECT *,
+CASE
+WHEN ship_mode = 'Second Class' THEN 'YES'
+ELSE 'NO'
+END AS Second_Class_or_not
+FROM sales
+
+-- Append a new column that shows if the profit made by the organisation is above the average or not
+
+SELECT avg(profit) FROM sales
+
+--avg profit is 28.6
+
+SELECT *,
+CASE
+WHEN profit > 28.6 THEN 'YES'
+ELSE 'NO'
+END AS Above_average_profit_or_not
+FROM sales
+
+--Append a new column that shows if the quantity of goods bought for the year is above average or not 
+ 
+SELECT avg(quantity) FROM sales
+
+Average quantitiy is 3.7
+
+SELECT *,
+CASE
+WHEN quantity > 3.7 THEN 'YES'
+ELSE 'NO'
+END AS Above_avg_quantity_not
+FROM sales
+
