@@ -58,3 +58,87 @@ WHERE discount > 0.2
 SELECT order_id, order_line
 FROM sales
 WHERE discount > 0.2
+
+-- AND OPERATOR
+
+SELECT * FROM customer
+WHERE segment = 'Consumer' AND country = 'United States'
+
+SELECT * FROM customer
+WHERE age = 20 AND state = 'Texas'
+
+SELECT * FROM customer
+WHERE region ='West' AND country = 'United States'
+
+SELECT * FROM customer
+WHERE segment ='Home Office' AND city = 'Los Angeles'
+
+SELECT * FROM customer
+WHERE segment ='Corporate' AND city = 'Eagan'
+
+--query out customers from Tampa who are from Southern region 
+
+SELECT customer_name,city,region
+FROM customer
+WHERE city = 'Tampa' AND region = 'South'
+
+
+--query out customers from florida who are in consumer segment
+ 
+ SELECT * FROM customer
+ WHERE state ='Florida' AND segment = 'Consumer'
+
+--OR 
+--query out customers from Seattle oR Oren
+
+SELECT customer_name, state, region, city
+FROM customer
+WHERE city = 'Seattle' OR City = 'Oren'
+
+SELECT * FROM PRODUCT
+WHERE category = 'Furniture' OR sub_category= 'Table'
+
+SELECT age, country,customer_id, region
+FROM customer
+WHERE region ='South' OR region = 'West'
+
+SELECT customer_name, city, state, postal_code
+FROM customer
+WHERE city = 'Los Angeles' OR state='California'
+
+SELECT * FROM product
+WHERE category = 'Office Supplies' OR sub_category = 'storage'
+
+
+--NOT OPERATOR
+
+SELECT * FROM product
+WHERE NOT category = 'Furniture'
+
+SELECT customer_name, age,region  
+FROM customer
+WHERE NOT region = 'West'
+
+SELECT * FROM sales
+WHERE NOT ship_mode='Second Class'
+
+SELECT order_id, quantity
+FROM sales
+WHERE NOT quantity >5
+
+SELECT * FROM product
+WHERE NOT category = 'Technology'
+
+--IN OPERATOR
+
+SELECT * FROM sales
+WHERE customer_id IN ('JE-15745', 'EM-13960')
+
+--BETWEEN OPERATOR
+
+SELECT * FROM sales
+WHERE order_date BETWEEN '2016-12-01' AND '2016-12-31'
+
+
+
+
