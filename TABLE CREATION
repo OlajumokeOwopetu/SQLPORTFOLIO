@@ -1,0 +1,138 @@
+CREATE TABLE best_selling_books(Book_name varchar,
+							   Author varchar,
+							   Original_language Varchar,
+							   First_published integer,
+							   Sales varchar);
+							   
+SELECT * FROM best_selling_books
+
+INSERT INTO best_selling_books
+values('The_Hobbit', 'J.R.R_Tolkien','English',1937,'$20million'),
+      ('Lolita', 'Vladimir_Nabokov','English', 1955, '$50million'),
+	  ('Heidi', ' Johanna_Spyri', 'German', 1980, '$50million'),
+	  ('Cosmos', 'Carl_Sagan','English', 1980, '$40million'),
+	  ('Jaws','Peter_Benchley', 'English', 1974, '$20million'),
+	  ('Dune','Frank_Herbert','English', 1965,'$20million'),
+	  ('The_Secret','Rhonda_Byrne','English', 2006, '$20million'),
+	  ('Black_Beauty','Anna_Sewell','English',1877, '$50million'),
+	  ('Lost_symbol','Dan_brown','English', 2003,'$30million'),
+	  ('The_shack','William','English', 2007, '$23million'),
+	  ('Love_story','Enrich_sagel','English', 1970, '$21million'),
+	  ('Kite_runner','Klahed','English', 2003, '$30million'),
+	  ('Thorn_birds','McCullough','English', 1977, '$33million'),
+	  ('Mockingjay','Suzanne_Collins','English', 2010, '$24million'),
+	  ('Gone_girl','Gullian_flynn','English', 2012, '$20million')
+	  
+SELECT * FROM best_selling_books
+
+
+CREATE TABLE students_performance(Serial_number integer,
+								  Names varchar,
+								  gender varchar,
+								  class varchar,
+								  score integer)
+								 
+SELECT * FROM students_performance
+
+INSERT INTO students_performance
+Values (001, 'Adesola', 'M','2B', 81),
+       (002, 'Cynthia', 'F', '2B', 89),
+	   (003, 'Jaden', 'M',  '2B', 70),
+	   (004, 'Isreal', 'M', '2B', 33),
+	   (005, 'Amarachi', 'F', '2B', 34),
+	   (006, 'Gideon', 'M', '2B', 45),
+	   (007, 'Amaka', 'F', '2B', 54),
+	   (008, 'Fathia', 'F','2B', 23),
+	   (009, 'Omolara', 'F', '2C', 56),
+	   (010, 'Jacob', 'M', '2C', 68),
+	   (011, 'Praise', 'F', '2C', 69),
+	   (012, 'Leah', 'F', '2C', 45),
+	   (013, 'Ashley', 'F', '2C', 57),
+	   (014, 'Monday', 'M', '2C', 66),
+	   (015, 'Sadiat', 'F', '2C',22)
+	   
+SELECT * FROM students_performance
+
+CREATE TABLE staff_details (employee_ID integer,
+						   Name varchar,
+						   Position varchar,
+						   Dept varchar,
+						   salary varchar)
+						   
+SELECT * FROM staff_details
+
+INSERT INTO staff_details
+Values (1270, 'Jay', 'Data_Engineer', 'ICT', '$12000'),
+       (1271, 'Abel', 'Secretary', 'Admin', '$10000'),
+	   (1273, 'Micheal', 'Salesman', 'Sales', '$21000'),
+	   (1274, 'Aron', 'Salesman', 'Sales', '$21000'),
+	   (1275, 'Sharon', 'Data_Analyst', 'ICT', '$15000'),
+	   (1276, 'Evelyn', 'Sales_manager', 'Sales', '$56000'),
+	   (1277, 'Peace', 'Secretary', 'Admin', '$10000'),
+	   (1278, 'LInda', 'Accountant', 'Account', '$21000'),
+	   (1279, 'George', 'Sales_manager', 'Sales', '$49000'),
+	   (1280, 'Sean', 'Accountant', 'Account', '$20000'),
+	   (1281, 'Deon', 'Production', 'Production', '$18000'),
+	   (1282, 'Heron', 'Salesman', 'Sales', '$2300'),
+	   (1283, 'Jean', 'Data_Analyst', 'ICT', '$15000'),
+	   (1284, 'Jayden', 'HR', 'Admin', '$23000'),
+	   (1285, 'Keon', 'QHSE', 'Admin', '$21000')
+	   
+SELECT * FROM staff_details
+
+CREATE TABLE salary_data_based_country(Job_title varchar,
+									  Education_level varchar,
+									  Country varchar,
+									  Years_of_experiece integer,
+									  Salary varchar)
+									  
+SELECT * FROM salary_data_based_country
+
+INSERT INTO salary_data_based_country
+Values ('Software_engineer','Bachelors', 'UK', 5, '$90000'),
+      ('Data_Analyst','Masters','USA', 3, '$65000' ),
+	  ('Senior_manager','PHD', 'Canada', 15, '$150000'),
+	  ('Sales_associate','Bachelors','USA', 7,'$60000'),
+	  ('Director','Masters', 'USA', 20, '$200000' ),
+	  ('Marketing_analyst','Bachelors', 'USA', 2, '$55000'),
+	  ('Product_manager','Masters', 'USA', 12, '$120000'),
+	  ('Sales_manager','Bachelors', 'China', 4, '$80000'),
+	  ('Marketing_coordinator','Bachelors', 'China', 1, '$45000'),
+	  ('Senior_scientist','PHD', 'Australia', 10, '$110000'),
+	  ('Software_developer' ,'Masters', 'UK', 3, '$75000'),
+	  ('HR_manager','Bachelors', 'UK', 18, '$140000'),
+	  ('Financial_analyst','Bachelors', 'China', 6, '$65000'),
+	  ('Project_manager','Masters', 'USA', 14, '$130000'),
+	  ('Customer_service_rep','Bachelors', 'Canada', 2, '$40000'),
+	  ('Operations_manager','Bachelors', 'China', 16, '$125000'),
+	  ('Marketing_manager','Masters', 'USA', 7, '$90000')
+	  
+SELECT * FROM salary_data_based_country
+
+
+CREATE TABLE fruits_prices_2020(Fruit varchar,
+							   Form varchar,
+							   Retail_price_unit varchar,
+							   Yeild integer,
+							   Cup_equivalent_unit varchar)
+							   
+SELECT * FROM fruits_prices_2020
+
+INSERT INTO fruits_prices_2020
+Values ('Apples', 'Fresh', 'per_pound', 0.9, 'pounds'),
+       ('Apples_applesauce', 'Canned','per_pound', 1, 'pounds'),
+	   ('Apples_ready_to_drink','Juice','per_pint', 1, 'fluid_ounce'),
+	   ('Apples_frozen_concentrate', 'Juice', 'per_pint', 1, 'fluid_ounce'),
+	   ('Apricots', 'Fresh', 'per_pound', 0.93, 'pounds'),
+	   ('Apricots_packed_in_juice','canned', 'per_pound', 1,'pounds'),
+	   ('Apricots_packed_in_water', 'canned', 'per_pound', 0.65,'pounds'),
+	   ('Apricots', 'Dried', 'per_pound', 0.64, 'pounds'),
+	   ('Bananas','Fresh', 'per_pound', 1, 'pounds'),
+	   ('Berries_mixed', 'Frozen', 'per_pound', 0.96, 'pounds'),
+	   ('Blueberries', 'Fresh', 'per_pound', 1, 'pounds'),
+	   ('Blueberries', 'Frozen', 'per_pound', 0.95, 'pounds'),
+	   ('Blueberries', 'Fresh', 'per_pound', 1, 'pounds'),
+	   ('Blackberries','Fresh', 'per_pound', 1, 'pounds'),
+	   ('Cantaloupe', 'Fresh', 'per_pound', 0.51, 'pounds')
+	   
+SELECT * FROM fruits_prices_2020
